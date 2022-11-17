@@ -57,3 +57,17 @@ function insert(readData) {
     // cell3.innerHTML = readData[2];    
 
 }
+
+//EDIT
+function edit(td){
+    var row = td.parentElement.parentElement;
+    document.getElementById("name").value = row.cells[0].innerHTML;
+    document.getElementById("email").value = row.cells[1].innerHTML;
+    document.getElementById("number").value = row.cells[2].innerHTML;
+
+    
+}
+
+//DELETE
+
+// UPDATE
