@@ -75,8 +75,6 @@ function edit(td){
     document.getElementById("name").value = row.cells[0].innerHTML;
     document.getElementById("email").value = row.cells[1].innerHTML;
     document.getElementById("number").value = row.cells[2].innerHTML;
-
-    
 }
 
 // UPDATE
@@ -89,8 +87,10 @@ function Update() {
 
 // DELETE
 function remove(td) {
-    row =td.parentElement.parentElement;
+    var ans = confirm("Are you sure! you want to delete this record");
+    if(ans == true){
+        row =td.parentElement.parentElement;
     // document.getElementById("table").remove();
     document.getElementById("table").deleteRow(row.rowIndex);
-    
+    }
 }
