@@ -8,14 +8,14 @@ function Submit() {
     var dataEntered = retrieveData(); // retrieve data data after on click submit 
     var readData = readingDataFromLocalStorage(dataEntered);
     if(dataEntered == false){
-        message.innerHTML = "Please Enter Data!"
+        message.innerHTML = `<h3 style = "color: red">Please Enter Data!</h3>`
     }else{
         if(row == null) {
             insert(readData);
-            message.innerHTML = "Data Inserted"
+            message.innerHTML = `<h3 style = "color: green">Data Inserted</h3>`
         }else{
             Update();
-            message.innerHTML = "Data Updated"
+            message.innerHTML = `<h3 style = "color: orange">Data Updated</h3>`
         }
     }
     document.getElementById("form").reset();
