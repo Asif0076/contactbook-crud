@@ -2,11 +2,21 @@
 // CRUD .. Create,Read,Update and Delete
 
 // Golbal Variables
+var row = null;
+
 function Submit() {
     var dataEntered = retrieveData(); // retrieve data data after on click submit 
     var readData = readingDataFromLocalStorage(dataEntered);
-    insert(readData);
-    Update();
+    
+    
+    if(row == null) {
+        insert(readData);
+        message.innerHTML = "Data Inserted"
+    }else{
+        Update();
+        message.innerHTML = "Data Updated"
+    }
+
 }
  
 // CREATE
@@ -61,7 +71,7 @@ function insert(readData) {
 
 //EDIT
 function edit(td){
-    var row = td.parentElement.parentElement;
+    row = td.parentElement.parentElement;
     document.getElementById("name").value = row.cells[0].innerHTML;
     document.getElementById("email").value = row.cells[1].innerHTML;
     document.getElementById("number").value = row.cells[2].innerHTML;
@@ -74,5 +84,5 @@ function Update() {
     row.cells[0].innerHTML = document.getElementById("name").value;
     row.cells[1].innerHTML = document.getElementById("email").value;
     row.cells[2].innerHTML = document.getElementById("number").value;
-
+    row = null;
 }
