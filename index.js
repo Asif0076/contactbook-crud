@@ -51,7 +51,6 @@ function Submit() {
 
         var arr = [na1, em1, nu1];
         return arr;
-
     } 
 
     //INSERT
@@ -63,7 +62,7 @@ function insert(readData) {
     row.insertCell(3).innerHTML = `<button onClick = edit(this)>EDIT</button>
                                     <button onClick = remove(this)>DELETE</button>`;
 
-     
+   
     //both are same work  
     // var cell1= row.insertCell(0);
     // var cell2= row.insertCell(1);
