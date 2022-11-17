@@ -7,16 +7,17 @@ var row = null;
 function Submit() {
     var dataEntered = retrieveData(); // retrieve data data after on click submit 
     var readData = readingDataFromLocalStorage(dataEntered);
-    
-    
-    if(row == null) {
-        insert(readData);
-        message.innerHTML = "Data Inserted"
+    if(dataEntered == false){
+        message.innerHTML = "Please Enter Data!"
     }else{
-        Update();
-        message.innerHTML = "Data Updated"
+        if(row == null) {
+            insert(readData);
+            message.innerHTML = "Data Inserted"
+        }else{
+            Update();
+            message.innerHTML = "Data Updated"
+        }
     }
-
 }
  
 // CREATE
@@ -27,7 +28,11 @@ function Submit() {
         var number1 =  document.getElementById("number").value;
     
         var arr = [name1,email1,number1];
-        return arr;
+        if(arr.includes("")){
+            return false;
+        }else{
+            return arr;
+        }
     }
 
     // READ
