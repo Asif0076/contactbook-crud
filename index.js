@@ -18,6 +18,7 @@ function Submit() {
             message.innerHTML = "Data Updated"
         }
     }
+    document.getElementById("form").reset();
 }
  
 // CREATE
