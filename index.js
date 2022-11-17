@@ -5,9 +5,9 @@
 function Submit() {
     var dataEntered = retrieveData(); // retrieve data data after on click submit 
     var readData = readingDataFromLocalStorage(dataEntered);
-    console.log(readData);
+    insert(readData);
 }
-
+ 
 // CREATE
 // retriving data from form
     function retrieveData() {
@@ -18,7 +18,6 @@ function Submit() {
         var arr = [name1,email1,number1];
         return arr;
     }
-
 
     // READ
     // data in local storage
@@ -37,3 +36,24 @@ function Submit() {
         return arr;
 
     } 
+
+    //INSERT
+function insert(readData) {
+    var row = table.insertRow();
+    row.insertCell(0).innerHTML = readData[0];
+    row.insertCell(1).innerHTML = readData[1];
+    row.insertCell(2).innerHTML = readData[2];
+    row.insertCell(3).innerHTML = `<button onClick = edit(this)>EDIT</button>
+                                    <button onClick = remove(this)>DELETE</button>`;
+
+     
+    //both are same work  
+    // var cell1= row.insertCell(0);
+    // var cell2= row.insertCell(1);
+    // var cell3= row.insertCell(2);
+
+    // cell1.innerHTML = readData[0];
+    // cell2.innerHTML = readData[1];
+    // cell3.innerHTML = readData[2];    
+
+}
