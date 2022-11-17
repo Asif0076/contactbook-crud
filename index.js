@@ -6,6 +6,7 @@ function Submit() {
     var dataEntered = retrieveData(); // retrieve data data after on click submit 
     var readData = readingDataFromLocalStorage(dataEntered);
     insert(readData);
+    Update();
 }
  
 // CREATE
@@ -68,6 +69,10 @@ function edit(td){
     
 }
 
-//DELETE
-
 // UPDATE
+function Update() {
+    row.cells[0].innerHTML = document.getElementById("name").value;
+    row.cells[1].innerHTML = document.getElementById("email").value;
+    row.cells[2].innerHTML = document.getElementById("number").value;
+
+}
