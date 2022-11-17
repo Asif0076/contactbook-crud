@@ -86,3 +86,11 @@ function Update() {
     row.cells[2].innerHTML = document.getElementById("number").value;
     row = null;
 }
+
+// DELETE
+function remove(td) {
+    row =td.parentElement.parentElement;
+    // document.getElementById("table").remove();
+    document.getElementById("table").deleteRow(row.rowIndex);
+    
+}
