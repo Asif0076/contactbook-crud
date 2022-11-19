@@ -19,7 +19,7 @@ body {
 
 table {
     border-color: white;
-     
+    margin-left: 20px;     
 }
 td{
     padding: 8px 16px;
