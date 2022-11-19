@@ -15,12 +15,6 @@ body {
     color: #fff;
 }
 
-/* .fieldset {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-} */
-
 #message{
     text-align: center;
 }
@@ -31,6 +25,7 @@ legend{
 
 input {
     margin-left: 500px;
+    border-radius: 8px;
 }
 table {
     border-color: white;
