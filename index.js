@@ -12,7 +12,7 @@ function Submit() {
     }else{
         if(row == null) {
             insert(readData);
-            message.innerHTML = `<h3 style = "color: green">Data Inserted</h3>`
+            message.innerHTML = `<h3 style = "color: blue">Data Inserted</h3>`
         }else{
             Update();
             message.innerHTML = `<h3 style = "color: orange">Data Updated</h3>`
