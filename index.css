@@ -15,9 +15,10 @@ body {
     color: #fff;
 }
 
+
 table {
     border-color: white;
-
+    margin-left: 100px;    
 }
 td{
     padding: 8px 16px;
