@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family: "fira sans", sans-serif;
+    background-color: blanchedalmond;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
 
 table {
     border-color: white;
-    margin-left: 100px;    
+     
 }
 td{
     padding: 8px 16px;
